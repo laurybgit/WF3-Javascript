@@ -6,9 +6,26 @@
   <title>Pierre, Feuille, Ciseaux</title>
 </head>
 <body>
-  <button></button>
-  <button></button>
-  <button></button>
-  <div class="resultat"></div>
+  <button>Pierre</button>
+  <button>Feuille</button>
+  <button>Ciseaux</button>
+  <div class="resultat">Test</div>
+
+  <script>
+    const buttons = document.querySelectorAll("button");
+    console.log("ça marche"); 
+
+    for (let i=0; i<buttons.length; i++){
+      buttons[i].addEventListener("click", function(){
+        const joueur = buttons[i].innerHTML; 
+        const robot = buttons[Math.floor(Math.random()*buttons.length)].innerHTML; 
+        console.log(`Joueur : ${joueur} VS Robot ${robot}`); 
+      })
+    }
+
+  </script>
+
+  <!-- Arrêt vidéo 10'23 
+  https://www.youtube.com/watch?v=A9G_0YKBY2s -->
 </body>
 </html>
