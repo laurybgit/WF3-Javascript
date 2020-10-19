@@ -4,59 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pierre, Feuille, Ciseaux</title>
-  <style>
-    .puit{
-      color: transparent; 
-      background-color: transparent; 
-      border: none; 
-      outline: none; /* enlève la zone de sélection qui apparaît */ 
-    }
-  </style>
+  <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
-  <button>Pierre</button>
-  <button>Feuille</button>
-  <button>Ciseaux</button>
-  <button class="puit">Puit</button>
-  <div class="resultat"></div>
+  <div id="container">
+    <!-- Les titres -->
+    <h1>Pierre, Feuille, Ciseaux</h1>
+    <h2>Jouez contre l'ordinateur dans une partie de folie !</h2>
 
-  <script>
-    const buttons=document.querySelectorAll("button");
-    console.log("ça marche"); 
+    <!-- Les boutons et la classe résultat -->
+    <button>Pierre</button>
+    <button>Feuille</button>
+    <button>Ciseaux</button>
+    <div class="resultat"></div>
 
-    for (let i=0; i<buttons.length; i++){
-      buttons[i].addEventListener("click", function(){
-        const joueur=buttons[i].innerHTML; 
-        const robot=buttons[Math.floor(Math.random()*buttons.length)].innerHTML;
-        let resultat="";  
+    <!-- Ici le script JS -->
+    <script>
+      const buttons=document.querySelectorAll("button");
+      // console.log("ça marche"); 
 
-    // maintenant on a besoin de toute la logique du jeu 
-    if (joueur==robot){
-      resultat="Égalité"; 
-    } else if( (joueur=="Pierre" && robot=="Ciseaux") || (joueur=="Ciseaux" && robot=="Feuille") ||  (joueur=="Feuille" && robot=="Pierre")){
-      resultat="Gagné"; 
-    } else if ( (joueur=="Puit" && robot=="Ciseaux") || (joueur=="Puit" && robot=="Pierre")){
-      resultat="Gagné avec la technique secrète"; 
-    }
-      else{
-      resultat="Perdu"; 
-    }
-    console.log(`Joueur : ${joueur} VS Robot ${robot}`);
-    console.log(resultat);  
+      for (let i=0; i<buttons.length; i++){
+        buttons[i].addEventListener("click", function(){
+          const joueur=buttons[i].innerHTML; 
+          const robot=buttons[Math.floor(Math.random()*buttons.length)].innerHTML;
+          let resultat="";  
+          // logique du jeu 
+          if (joueur==robot){
+            resultat="Égalité"; 
+          } else if( (joueur=="Pierre" && robot=="Ciseaux") || (joueur=="Ciseaux" && robot=="Feuille") ||  (joueur=="Feuille" && robot=="Pierre")){
+            resultat="Gagné"; 
+          } else{
+            resultat="Perdu"; 
+          }
+          // console.log(`Joueur : ${joueur} VS Robot ${robot}`);
+          // console.log(resultat);  
 
-    document.querySelector(".resultat").innerHTML=`
-    Joueur : ${joueur} </br>
-    Robot : ${robot} </br>
-    ${resultat}` 
-  })
-    }
-    
-    
-                     // toutes les possibilités si on gagne 
-
-  </script>
-
-  <!-- Arrêt vidéo 10'23 
-  https://www.youtube.com/watch?v=A9G_0YKBY2s -->
+          document.querySelector(".resultat").innerHTML=`
+          Joueur : ${joueur} </br>
+          Robot : ${robot} </br>
+          ${resultat}` 
+        })
+      }
+    </script>
+    <!-- 
+    https://www.youtube.com/watch?v=A9G_0YKBY2s -->
+</div>
 </body>
 </html>
