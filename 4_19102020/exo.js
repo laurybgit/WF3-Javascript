@@ -15,11 +15,4 @@ superieurOuEgal(a,b);
 
 /* Exercice 2 */ 
 
-function nombre(){
-  let nombreUser=parseInt(prompt("Donnez-moi un nombre")); 
-  if (nombreUser!=parseInt){
-    alert("ce n'est pas un nombre !"); 
-  }
-} 
-
-nombre(); 
+// voir la correction CM 
