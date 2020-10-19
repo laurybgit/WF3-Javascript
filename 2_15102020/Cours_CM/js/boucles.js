@@ -226,7 +226,7 @@ let nbCoups=0;
 
 console.log('cheat : le nombre cherché est '+nbMystere); // astuce ^^
 while (nbUser!=nbMystere && nbCoups<=8 ) {
-    if(nbCoups!=8){
+    if(nbCoups!=8){ //pour 9 tentatives (part de zéro)
         nbUser=parseInt(prompt("Donnez un nombre entre 1 et 50 : "));
         // je veux vérifier que le nombre donné par l'utilisateur est bien compris 
         // entre 1 et 50 : 
@@ -249,9 +249,20 @@ while (nbUser!=nbMystere && nbCoups<=8 ) {
             alert('Valeur non conforme, recommencez !');
         }
     }else{
-        alert('Désolé, vous n avez plus de tentatives... le nombre était : '+nbMystere);
-         nbUser=nbMystere;
+        alert(`Désolé, vous n\' avez plus de tentatives... le nombre était : ${nbMystere}`);
+         nbUser=nbMystere; //permet de stopper la boucle. Indispensable. C'est un artifice en gros. 
         // ou tentatives=9;
     }
     
 }
+
+// Une boucle sympa à visualiser 
+
+// let compteur = 0;
+// while (true) {
+//     compteur++;
+//     console.log(compteur,"Bonjour");
+//     if (compteur > 5) {
+//         break;
+//     }
+// } 
