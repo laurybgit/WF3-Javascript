@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de Films</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+       <h1>Bibliothèque de films</h1>
+   </header>
+   <nav>
+       <ul>
+           <li><a href="index.html">Accueil</a></li>
+           <li><a href="films.html" class="selected">Films</a></li>
+           <li><a href="series.html">Séries</a></li>
+       </ul>
+   </nav> 
+   <main>
+       <!-- la section "content" s'occupe d'afficher le contenu général : la liste des films-->
+       <section id="content">
+            <h2>Voici notre préselection de films cultes</h2>
+            <div id="listeFilms" class="listeFilms">
+                <!--
+                    <article>
+                        // inception
+                    </article>
+                    <article>
+                        // les dents de la mer
+                    </article>
+                -->
+            </div>
+        </section>
+        <!-- la section "contentDétails" s'occupe d'afficher les détails d'un films-->
+        <section id="contentDetails">
+            <!-- vide, c'est js qui va remplir les détails.. -->
+        </section>
+   </main>
+   <script src="js/index.js"></script>
+</body>
+</html>
