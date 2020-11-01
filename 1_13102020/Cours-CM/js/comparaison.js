@@ -18,6 +18,7 @@ console.log(100==100); // true
 
 console.log("toto = tata ?"); 
 console.log("toto"=="tata"); // false
+// pour comparer une égalité à la fois de type et de valeur : === (trois = )
 
 let password="692504";
 console.log("107585=password ?");
