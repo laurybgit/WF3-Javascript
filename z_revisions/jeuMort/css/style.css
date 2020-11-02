@@ -1,0 +1,35 @@
+/* Général */
+
+html{
+  font-size: 90%; 
+}
+
+body{
+  margin: 0 auto; 
+  width: 1024px; 
+  background-color: rgb(226, 226, 203); 
+}
+
+/* Article intro */
+img{
+  width: 10%; 
+}
+
+/* Form */
+form{
+  padding: 2%; 
+}
+
+label, input{
+  margin: 1%; 
+}
+
+h1, form{
+  text-align: center; 
+}
+
+article:nth-of-type(1){
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
