@@ -1,4 +1,17 @@
+/* Utilisation des variables CSS */
+
+html{
+  --color-primary: rgb(144, 101, 184); 
+  --color-font: black; 
+}
+
 body {
   margin: 0; 
-  background-color: rgb(144, 101, 184); 
+  background-color: var(--color-primary); 
+  color: var(--color-font); 
+}
+
+main{
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
