@@ -1,0 +1,23 @@
+/* Utilisation des variables css */
+
+html {
+	/* Comment déclarer une variable css: avec le préfixe -- */
+	--color-primary: #8dd2ff;
+	--color-font: black;
+}
+
+body {
+	margin: 0;
+	/* Pour utiliser une variable css, on écrira: var(--nom-de-la-variable-css) */
+	background-color: var(--color-primary);
+	color: var(--color-font);
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}

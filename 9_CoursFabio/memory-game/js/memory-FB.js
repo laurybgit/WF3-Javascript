@@ -59,3 +59,23 @@ const arrayOfIds = Array.from(Array(492), function() {
 	return j;
 })
 console.table(arrayOfIds);
+
+// Création d'une fonction qui va permettre de créer une nouvelle image 
+const createImage=(id) => {
+  // création de la balise img 
+  const img=document.createElement("img");
+
+  // J'attribue à cette image une source 
+  img.setAtrribute ("src", `z_assets/images/${id}.png`); 
+  img.setAttribute ("alt", `pokemon numero ${id}`); 
+
+  return img; 
+}
+
+$ ("#play").on("click", function() {
+  for (let i=0;i=arrayOfIds.length; i++){
+    const element=arrayOfIds[i]; 
+    const newImg=createImg(element);
+    $("game").append(newImg);  
+  }
+}) 
