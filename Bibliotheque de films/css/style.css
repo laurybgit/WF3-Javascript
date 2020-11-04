@@ -1,0 +1,59 @@
+/* ============================================================
+===                     bibliotheque de films               ===
+===============================================================
+
+*/
+:root {
+    /* bonne pratique : on utilise :root pour déclarer toutes ses variables */
+    --maMargeClassique : 2em;
+    --couleurSecondaire :  #ccc;
+}
+html {
+    font-size:100%;
+    /* définition de la variable CSS */
+    --couleurPrincipale: rgb(18, 149, 224);
+}
+body, h1, ul {
+    margin: 0;
+}
+/* --------------- header --------------- */
+header {
+    background-color: var(--couleurPrincipale); /* utilisation de la variable ! */
+    text-align: center;
+    padding: var(--maMargeClassique) 0;
+}
+/* --------------- nav --------------- */
+nav {
+    background-color: var(--couleurSecondaire);
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style-type: none;
+}
+nav li {
+    margin: 0 var(--maMargeClassique);
+    padding: 10px 0;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+nav a:hover, .selected {
+    color: var(--couleurPrincipale);
+}
+.listeFilms {
+    display:flex;
+    flex-wrap: wrap;
+}
+.listeFilms article img {
+    height: 400px;
+    border-radius: 10px;
+}
+.listeFilms article {
+    margin-right: 20px;
+}
+#lienRetour {
+    display: none;
+}
