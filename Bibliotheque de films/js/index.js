@@ -46,9 +46,11 @@ ajouterFilm("La Cité de la Peur", "./media/laCiteDeLaPeur.jpg", "./media/BA_La_
 ajouterFilm("La Parrain", "./media/leParrain.jpg", "./media/BA_Le_Parrain.mp4", "thriller", 1970);
 ajouterFilm("Les Evadés", "./media/lesEvades.jpg", "./media/BA_Les_Evades.mp4","drame",1990);
 ajouterFilm("Joker", "./media/joker.jpeg", "./media/BA_Joker.mp4", "drame",2010);
-ajouterFilm("Le Pianiste", "./media/lePianiste.jpg", "./media/BA_Le_pianiste.mp4","guerre", 2000);
+ajouterFilm("Le Pianiste", "./media/lePianiste.jpg", "./media/BA_Le_pianiste.mp4","guerre", 2000); 
 // console.log(tabFilms);
 // console.log(tabFilms[9]);
+
+console.table (tabFilms); 
 
 // créer une fonction dont le rôle est d'afficher les details :
 function afficherDetailsFilm (filmIndex) {
